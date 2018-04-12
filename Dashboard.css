@@ -1,0 +1,87 @@
+html {
+    overflow-y: scroll;
+}
+table {
+
+    border-style:solid;
+
+    border-width:2px;
+
+    border-color:black;
+}
+
+.main_header{
+    height: 15%;
+    background-color: rgba(217, 217, 217, 0.2);
+}
+
+.main_title{
+    font-size: xx-large;
+}
+
+.title{
+    text-align: left;
+    font-weight: bold;
+    font-family: "Lucida Console" ;
+    border-bottom: rgba(57, 115, 172, 0.3);
+    border-left: rgba(57, 115, 172, 0.3);
+    border-right: rgba(57, 115, 172, 0.3);
+}
+
+.container-fluid{
+    background-color: rgba(217, 217, 217, 0.2);
+    height: 100%;
+
+}
+.border-bottom{
+    border-bottom: 10px solid rgba(148, 156, 158, 0.3);
+}
+
+.border-right{
+    border-right: 10px solid rgba(148, 156, 158, 0.3) ;
+}
+
+.border-left{
+    border-left: 10px solid rgba(148, 156, 158, 0.3);
+}
+
+.sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+}
+
+.row-fluid{height: 33%;
+     width: 100%;
+
+ }
+.row-stretch{height: 33%;
+    width: 100%;
+}
+
+.table_header{
+    background: rgba(34, 71, 101, 1.0);
+    text-align: center;
+    color: whitesmoke;
+    font-family: helvetica;
+}
+
+.ad_bar{
+    background-color:  rgba(34, 71, 101,1.0);
+    color: whitesmoke;
+}

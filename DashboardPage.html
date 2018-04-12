@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Dashboard.css" type="text/css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
+
+    <script src="fetchData.js"></script>
+
+</head>
+
+
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 ad_bar" >
+            <div style = "font-size: 18px;font-weight: bold;">
+                Energy Usage Dashboard
+            </div>
+        </div>
+        <div class = "col-md-10" style ="font-size: 25px; text-align: right; font-weight: bold; background-color: rgba(217, 217, 217, 0.2); color: rgb(106, 106, 106)">
+            <div>
+                SagaCity Software Inc.
+            </div>
+        </div>
+   </div>
+    <div class = "row"></div>
+    <div class ="row">
+        <div class ="col-md-2 ad_bar">
+
+            <img src="C:\Bitnami\wappstack-7.1.12-0\apache2\htdocs\untitled\avatar.png" style="margin:auto; width:100%;display:block; padding-top: 5%" />
+            <div><b>Client Id:</b> 2342134</div>
+            <div><b># of Units:</b> 12</div>
+        </div>
+
+        <div class ="col-md-5">
+           <div class = "row">
+                    <div class="col-md border-bottom border-right">
+                        <div class ="table_header">
+                            <h3>Similar-Sized Building Comparison</h3>
+                        </div>
+                        <canvas id="interBuildingComparison"></canvas>
+                    </div>
+           </div>
+            <div class = "row">
+                <div class="col-md border-bottom border-right">
+                    <div class = "chart">
+                        <div class ="table_header">
+                            <h3>Month-To-Date</h3>
+                        </div>
+                        <div class = "table_body">
+                            <canvas id="monthToDate"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class ="col-md-5 border-right">
+            <div class = "row">
+                    <div class="col-md border-bottom">
+                        <div class = "chart">
+                            <div class ="table_header">
+                                <h3>Monthly Energy Usage</h3>
+                            </div>
+                            <div class = "table_body">
+                                <canvas id="twelveMonthDataGraph"></canvas>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class = "row">
+                    <div class="col-md border-bottom">
+                        <div class = "chart">
+                            <div class ="table_header">
+                                <h3>Cost of Energy Usage</h3>
+                            </div>
+                            <div class = "table_body">
+                                <canvas id="timeOfDayEnergyUse"></canvas>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class ="row">
+        <div class ="col-md-2 ad_bar"></div>
+        <div class="col-md-10 border-right border-bottom">
+            <div class = "chart">
+                <div class ="table_header">
+                    <h2>Non-functioning Meters</h2>
+                </div>
+                <table class="table" id="missingReadsTable">
+                    <thead>
+                        <tr>
+                            <th data-field="MeterId">Meter Id</th>
+                            <th data-field="DateCreated">Date Created</th>
+                            <th data-field="PropertyId">Property Id</th>
+                        </tr>
+                    </thead>
+                 </table>
+            </div>
+        </div>
+    </div>
+    </div>
+ </div>
+</body>
+</html>
